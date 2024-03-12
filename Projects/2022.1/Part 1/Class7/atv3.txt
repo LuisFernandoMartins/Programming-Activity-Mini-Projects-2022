@@ -1,0 +1,21 @@
+//3.Build a program that,
+//given the x and y coordinates of any two points on a Cartesian plane,
+//P1 and P2, calculate and print the distance between them.
+
+WriteLine("------------------------------------------------");
+WriteLine(" Luís Fernando da Costa Matins ");
+WriteLine("------------------------------------------------");
+WriteLine(" Exam 3 Revisions ");
+WriteLine("------------------------------------------------");
+
+Write("Put the Coordinate in PLano X: ");
+double n1 = Convert.ToInt32(Console.ReadLine());
+
+Write("Place the Coordinate in Plane Y: ");
+double n2 = Convert.ToInt32(Console.ReadLine());
+
+double n3 = 0;
+
+n3 = Math.Sqrt((n1 * n1) + (n2 * n2));
+
+WriteLine($"the Distance of These Points on the Cartesian Plane is: {n3} ");

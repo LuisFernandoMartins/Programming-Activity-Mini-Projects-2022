@@ -1,0 +1,21 @@
+Console.WriteLine("+-----------------------------------+");
+Console.WriteLine("| Luís Fernando da Costa Matins |");
+Console.WriteLine("+-----------------------------------");
+Console.WriteLine("| Challenge 4 |");
+Console.WriteLine("+-----------------------------------+");
+
+
+Challenge4();
+
+void Challenge4()
+{
+     int[] Vector = Vector.RandomVector(10);
+     Console.WriteLine(Vector.TextArray());
+
+     var NewVector = Vector.TextArray();
+    
+     var Rep = Vector.Distinct().ToArray();
+
+     Array.ForEach(Rep, NewVector => Console.Write(NewVector));
+    
+}

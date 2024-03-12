@@ -1,0 +1,37 @@
+//Question 1
+//Develop an algorithm that, given 3 sides of a Polygon, checks if it is a triangle, and what type of triangle it is isosceles, scalene or equilateral.
+
+
+Write("Enter Measurement 1: ");
+var n1 = Convert.ToInt32(Console.ReadLine());
+
+Write("Enter Measurement 2: ");
+var n2 = Convert.ToInt32(Console.ReadLine());
+
+Write("Insert Measurement 3: ");
+var n3 = Convert.ToInt32(Console.ReadLine());
+
+if (((n2 - n3) < n1 && n1 < (n2 + n3)) && ((n1 - n3)< n2 && n2 < (n1 + n3)) && ((n1 - n2) < n3 && n3 <( n1 +n2)))
+{
+     WriteLine("That's a triangle!!!");
+
+     if ((n1 == n2) && (n1 == n3) && (n3 == n2))
+     {
+         WriteLine("This is an Equilateral triangle");
+     }
+
+     if ((n1 == n2) || (n1 == n3) || (n3 == n2))
+     {
+         WriteLine("This is an isosceles triangle");
+     }
+   
+     if (!(n1 == n2) || !(n1 == n3) || !(n3 == n2))
+     {
+         WriteLine("This is a Scalene triangle");
+     }
+
+}
+else
+{
+     Write("The account cannot be completed!!!");
+}

@@ -1,0 +1,53 @@
+//7.Make a program that, given 2 numbers, and the desired operation (+, -, *, /), gives the result of that count.
+
+WriteLine("------------------------------------------------");
+WriteLine(" Luís Fernando da Costa Matins ");
+WriteLine("------------------------------------------------");
+WriteLine(" Exam 8 Revisions ");
+WriteLine("------------------------------------------------");
+
+
+var n1 = 0;
+var n2 = 0;
+
+Write("Enter a Number: ");
+n1 = Convert.ToInt32(Console.ReadLine());
+
+Write("Enter a Number: ");
+n2 = Convert.ToInt32(Console.ReadLine());
+
+int sum = n1 + n2;
+int sub = n1 - n2;
+int div = n1 / n2;
+int mult = n1 * n2;
+ 
+
+
+
+WriteLine("Select the Desired Operation: ");
+WriteLine("1 = Addition (+)");
+WriteLine("2 = Subtraction (-)");
+WriteLine("3 = Multiplication (X)");
+WriteLine("4 = Division (/)");
+ 
+
+String op = ReadLine();
+if (op.Contains("1"))
+{
+     Write($"The sum is: {sum}");
+}
+
+if (op.Contains("2"))
+{
+     Write($"Subtraction is: {sub}");
+}
+
+if (op.Contains("3"))
+{
+     Write($"The Multiplication is: {mult}");
+}
+
+if (op.Contains("4"))
+{
+     Write($"The division is: {div}");
+}

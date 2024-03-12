@@ -1,0 +1,26 @@
+//4.Given 3 grades and the weight of each one, write a program that calculates the weighted average of these grades.
+
+WriteLine(" Luís Fernando da Costa Matins ");
+WriteLine("------------------------------------------------");
+WriteLine(" Exam 4 Revisions ");
+WriteLine("------------------------------------------------");
+
+Write("Enter the Note for Subject 1: ");
+double n1 = Convert.ToInt32(Console.ReadLine()) ;
+Write("Enter the Weight of Matter 1: ");
+double n2 = Convert.ToInt32(Console.ReadLine());
+
+Write("Enter the Note for Subject 2: ");
+double n3 = Convert.ToInt32(Console.ReadLine());
+Write("Enter the Weight of Matter 2: ");
+double n4 = Convert.ToInt32(Console.ReadLine());
+
+Write("Enter the Note for Subject 3: ");
+double n5 = Convert.ToInt32(Console.ReadLine());
+Write("Enter the Weight of Matter 3: ");
+double n6 = Convert.ToInt32(Console.ReadLine());
+
+double for1 = ((n1*n2) + (n3*n4) +(n5*n6)) / ( n2 + n4 + n6);
+
+ 
+Write($"Your Weighted Average Was {for1}");

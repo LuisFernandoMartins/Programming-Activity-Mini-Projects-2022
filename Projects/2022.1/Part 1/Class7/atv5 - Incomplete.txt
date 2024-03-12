@@ -1,0 +1,33 @@
+WriteLine(" Luís Fernando da Costa Matins ");
+WriteLine("------------------------------------------------");
+WriteLine(" Exam 5 Revisions ");
+WriteLine("------------------------------------------------");
+
+//Prof I did some research but I didn't find anything to solve the Line 31 Problem, I tried but nothing... anyway, if you could help me in the future, help me finish this here.
+
+
+Write("Enter your birthday:");
+int day = Convert.ToInt32(Console.ReadLine());
+
+Write("Enter your birthday month:");
+int month = Convert.ToInt32(Console.ReadLine());
+
+Write("Enter your birthday year:");
+int year = Convert.ToInt32(Console.ReadLine());
+double i = 16;
+
+DateTime DataZero = new DateTime(1,1,1);
+Election DateTime = DateTime.Now;
+DateTime Birthdate = new DateTime(year, month, day);
+
+
+TimeSpan data = Election - Birthdate;
+Convert.ToInt32(TimeSpan.Parse(data.ToString()));
+int years = (DataZero - date).Year - 1;
+
+
+if (years => i )
+     { Write("You are eligible to vote."); }
+
+     else
+     { Write("You are unable to vote."); }

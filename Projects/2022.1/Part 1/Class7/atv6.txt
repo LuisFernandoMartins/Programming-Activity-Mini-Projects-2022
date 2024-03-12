@@ -1,0 +1,31 @@
+//6.Make an algorithm that reads 10 numbers, and checks which are the smallest, largest and average.
+
+
+WriteLine("------------------------------------------------");
+WriteLine(" Luís Fernando da Costa Matins ");
+WriteLine("------------------------------------------------");
+WriteLine(" Exam 6 Revisions ");
+WriteLine("------------------------------------------------");
+
+ 
+
+Write($"Enter the Number of Desired Elements: ");
+int n1 = Convert.ToInt32(Console.ReadLine());
+double[] val = new double [n1];
+
+for (int i = 0; i < n1; i++)
+{
+     val[i] = Convert.ToDouble(Console.ReadLine());
+}
+
+Array.Sort(val);
+int lower =val.GetLowerBound(0);
+int larger =val.GetUpperBound(0);
+
+double for1 = (largest + smallest) / 2;
+
+
+WriteLine("This is the largest value entered: " + val[largest].ToString());
+WriteLine("This is the smallest value entered: " + val[smallest].ToString());
+
+WriteLine($"this is the average of the values entered: {for1}");

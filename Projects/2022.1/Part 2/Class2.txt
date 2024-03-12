@@ -1,0 +1,66 @@
+WriteLine("------------------------------------------------");
+WriteLine(" Luís Fernando da Costa Matins ");
+WriteLine("------------------------------------------------");
+WriteLine(" Array, Vector or Matrix ");
+WriteLine("------------------------------------------------");
+
+//How to Create a Vector
+
+
+//Create variable that stores 1 single value
+
+/*Creates a vector that stores [x] elements
+int[] notes = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+for (int i = 0; i <= notes.Length; i++)
+{
+     WriteLine(notes[i]);
+}
+*/
+
+/* Classic Creation type vector
+notes[0] = 1;
+notes[1] = 2;
+notes[2] = 3;
+notes[3] = 4;
+notes[4] = 5;
+notes[5] = 6;
+notes[6] = 7;
+notes[7] = 8;
+notes[8] = 9;
+notes[9] = 10;
+
+for (int i = 1; i < notes.Length ; i++)
+{
+     notes[i] = i;
+}
+*/
+
+/*How to Create Vectors with Double Values
+double[] salaries = new double[5];
+for (int i = 0; i < salaries.Length; i++)
+{
+     Write($"Enter Salary {i}: ");
+     salaries[i] = Convert.ToInt32(ReadLine());
+}
+*/
+
+/* How to Create Vectors With Strings
+string[] names = new string[5];
+for (int i = 0; i < names.Length; i++)
+{
+     Write($"Enter Names {i}: ");
+     names[i] = Convert.ToString(Console.ReadLine());
+}
+  */
+
+//Activity
+
+//1. Ask the user what size vector they want to create
+Write("Enter the Number of Vector elements here: ");
+var size[] = new int [5] ;
+
+for (int i = 0; i < size.Lentght; i++)
+{
+     size [i] = i;
+}
+WriteLine($"{i}")

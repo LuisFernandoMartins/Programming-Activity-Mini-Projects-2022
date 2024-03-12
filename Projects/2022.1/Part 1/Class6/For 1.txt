@@ -1,0 +1,21 @@
+
+int PreviousTerm = 0;
+int CurrentTerm = 1;
+int sum = PreviousTerm + CurrentTerm;
+
+Console.Write(0 + "," + 1 + ",");
+
+
+for (int i = 1; i < 1000; i++)
+{
+
+     while (sum < 100000)
+     {
+
+         Write(sum + ",");
+
+         PreviousTerm = CurrentTerm;
+         CurrentTerm = sum;
+         sum = PreviousTerm + CurrentTerm;
+     }
+}

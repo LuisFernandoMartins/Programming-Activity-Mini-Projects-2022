@@ -1,0 +1,35 @@
+Console.WriteLine("-----------------------------------");
+Console.WriteLine(" Luís Fernando da Costa Matins ");
+Console.WriteLine("-----------------------------------");
+Console.WriteLine(" Challenge 1 ");
+Console.WriteLine("-----------------------------------");
+
+//1. Given a vector, show how many even numbers and odd numbers there are in the vector
+
+int[] Vector = Vector.RandomVector(10);
+         Console.WriteLine(Vector.TextArray());
+
+
+
+             Challenge1();
+             Console.WriteLine();
+            
+             void Challenge1()
+             {
+                 var par = 0;
+                 var odd = 0;
+
+
+                 for (int i = 0; i < 10; i++)
+                 {
+                     if (Vector[i] % 2 == 0)
+                     {
+                         pair++;
+                     }
+                 }
+                 odd = 10 - even;
+                 Console.WriteLine("Number of Even Numbers: " + even);
+                 Console.WriteLine("Amount of Odd Numbers: " + odd);
+
+
+             }

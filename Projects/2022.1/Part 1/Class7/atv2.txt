@@ -1,0 +1,45 @@
+
+1.262 / 5.000
+Resultados de tradução
+Resultado da tradução
+//2.Make a program that converts temperatures.
+//If ºC is provided, show ºF and ºK.
+//If ºK is provided, show ºC and ºF.
+//If ºF is given, show ºC and ºK
+
+WriteLine(" Luís Fernando da Costa Matins ");
+WriteLine("------------------------------------------------");
+WriteLine(" Exam 2 Revisions ");
+WriteLine("------------------------------------------------");
+
+
+Write("Enter a temperature in Celcius: ");
+var n1 = Convert.ToInt32(Console.ReadLine());
+
+double for1 = 1.8 * n1 + 32;
+double for2 = n1 + 273.15;
+
+WriteLine($"Equivalent Temperature on the Fahrenheit Scale: {for1}° ");
+WriteLine($"Equivalent Temperature on the Kelvin Scale: {for2}° ");
+
+
+
+Write("Enter a temperature in Fahrenheit: ");
+var n2 = Convert.ToInt32(Console.ReadLine());
+
+double for3 = (n2 - 32)/1.8;
+double for4 = (n2 - 32) * 5/9 + 273.15;
+
+WriteLine($"Equivalent Temperature on the Celcius Scale: {for3}° ");
+WriteLine($"Equivalent Temperature on the Kelvin Scale: {for4}° ");
+
+
+
+Write("Enter a temperature in Kelvin: ");
+var n3 = Convert.ToInt32(Console.ReadLine());
+
+double for5 = n3 - 273.15;
+double for6 = (n3 - 273.15) * 1.8 + 32;
+
+WriteLine($"Equivalent Temperature on the Celcius Scale: {for5}° ");
+WriteLine($"Equivalent Temperature on the Fahrenheit Scale: {for6}° ");

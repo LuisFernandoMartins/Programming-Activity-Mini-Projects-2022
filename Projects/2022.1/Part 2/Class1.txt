@@ -1,0 +1,43 @@
+WriteLine("------------------------------------------------");
+WriteLine(" Luís Fernando da Costa Matins ");
+WriteLine("------------------------------------------------");
+WriteLine(" Cycle 2 - Review - Class 1 ");
+WriteLine("------------------------------------------------");
+
+if (5 > 4)
+{
+     WriteLine("");
+     WriteLine("");
+     var a = 3.2;
+     WriteLine("");
+    
+     if (a == 5)
+     {
+         WriteLine();
+         ReadLine();
+         var b = 10;
+         a = 10;
+       
+         for (int i = 0; i < b; i++)
+         {
+             Write(b);
+         }
+     }
+}
+
+//Annotations
+
+//For (For) = defines conditions for natural Boolean counts
+     //There is a counter
+     //May not be executed
+     //Has a defined end
+
+//While (While) = runs the code as long as the sentence made is true
+     //No counter needed
+     //No defined end
+     //May not be executed
+
+//Do = Force the code to be run
+     //No counter needed
+     //No defined end
+     //It must be executed at least once

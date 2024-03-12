@@ -1,0 +1,30 @@
+Console.WriteLine("-----------------------------------");
+Console.WriteLine(" Luís Fernando da Costa Matins ");
+Console.WriteLine("-----------------------------------");
+Console.WriteLine(" Challenge 3 ");
+Console.WriteLine("-----------------------------------");
+
+
+
+Challenge3();
+
+void Challenge3()
+{
+     int[] Vector = Vector.RandomVector(10);
+     Console.Write(Vector.TextArray());
+    
+    
+     for(int i = 0; i <= Vector.Length-1; i++)
+     {
+         for (int n1 = i + 1; n1 <= Vector.Length-1; n1++)
+         {
+             if (Vector[i] == Vector[n1])
+             {
+                 Vector[i] = 0;
+                 Vector[n1] = 0;
+             }
+         }
+     }
+     Console.WriteLine(Vector.TextArray());
+
+}
