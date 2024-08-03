@@ -1,0 +1,98 @@
+#include <iostream>
+#include <queue>
+#include <string>
+#include <ctime>
+#include <cstdlib>
+
+using namespace std;
+
+// Structure to store food items with expiration dates
+struct FoodItem {
+    string name;
+    time_t expirationDate;
+
+    FoodItem(const string& n, time_t d) : name(n), expirationDate(d) {}
+
+    // Comparator to order by the nearest expiration date (done with the help of AI)
+    bool operator<(const FoodItem& other) const {
+        return expirationDate > other.expirationDate; // Invert the comparison for the priority_queue to be a min-heap (Explanation by AI)
+    }
+};
+
+// Function to generate a random expiration date (From 1 to 30 days from insertion).
+time_t GenerateExpirationDate() {
+    // Initialize time variables.
+    time_t now = time(0);
+    tm* MyTimeManager = localtime(&now);
+
+    // Add 1 to 30 days to the current date, mktime() primary function that creates time based on TimeManagers (tm*).
+    int RandomDate = rand() % 30 + 1;
+    MyTimeManager->tm_mday += RandomDate; // tm_mday sets a time limit in days, in this case, Day for Month
+    mktime(MyTimeManager);
+
+    return mktime(MyTimeManager);
+}
+
+// Function to format the date for display in the console.
+string FormatDate(time_t date) {
+    char buffer[11]; // Allocate space for the date.
+    tm* MyTimeManager = localtime(&date);
+    strftime(buffer, 11, "%d-%m-%Y", MyTimeManager); // Format the date.
+    return string(buffer);
+}
+
+int main() {
+    srand(time(0));  // Initialize the random number generator seed (done with the help of AI).
+
+    priority_queue<FoodItem> FoodQueue;
+    string foodName;
+    string command;
+
+    while (true) {
+        cout << "Commands:\n";
+        cout << "'insert' to insert food items into the queue\n";
+        cout << "'remove' to remove the first item from the queue\n";
+        cout << "'show' to display the food items in the queue\n";
+        cout << "'end' to end the program\n";
+
+        cout << "\nEnter a command: ";
+        cin >> command;
+
+        if (command == "insert") {
+            cout << "Insert food items into the queue (type 'end' to finish the section):" << endl;
+            while (true) {
+                cin >> foodName;
+                if (foodName == "end") {
+                    break;
+                }
+                time_t expirationDate = GenerateExpirationDate();
+                FoodQueue.push(FoodItem(foodName, expirationDate));
+            }
+        } else if (command == "remove") {
+            if (!FoodQueue.empty()) {
+                cout << "Removing the first item from the queue: " << FoodQueue.top().name << " with expiration date: " << FormatDate(FoodQueue.top().expirationDate) << endl;
+                FoodQueue.pop();
+            } else {
+                cout << "The queue is empty, nothing to remove." << endl;
+            }
+        } else if (command == "show") {
+            if (FoodQueue.empty()) {
+                cout << "Queue is empty." << endl;
+            } else {
+                // Display the elements in the queue, ordered by the nearest date.
+                priority_queue<FoodItem> AuxQueue = FoodQueue;
+                cout << "Food items in the queue:" << endl;
+                while (!AuxQueue.empty()) {
+                    FoodItem Item = AuxQueue.top();
+                    cout << "Name: " << Item.name << ", Expiration Date: " << FormatDate(Item.expirationDate) << endl;
+                    AuxQueue.pop();
+                }
+            }
+        } else if (command == "end") {
+            break;
+        } else {
+            cout << "Unknown command. Enter another command." << endl;
+        }
+    }
+    return 0;
+}
